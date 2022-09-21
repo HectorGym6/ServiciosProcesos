@@ -1,26 +1,23 @@
 public class RepeatMessageTask implements Runnable {
     private int times;
-    private String mensaje;
+    private String message;
     private int ttw;
 
-
-    public  RepeatMessageTask (int times, String mensaje, int tiempo) {
+    public RepeatMessageTask(int times, String message, int ttw) {
         this.times = times;
-        this.mensaje = mensaje;
-        this.ttw = tiempo;
+        this.message = message;
+        this.ttw = ttw;
     }
 
     @Override
     public void run() {
         for (int i = 0; i < times; i++) {
-            System.out.println("Goodbye");
+            System.out.println(message);
             try {
-                Thread.sleep(20);
+                Thread.sleep(ttw);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
-
             }
-
         }
     }
 }
