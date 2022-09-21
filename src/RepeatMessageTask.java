@@ -1,17 +1,13 @@
-public class GoodbyeTask implements Runnable {
+public class RepeatMessageTask implements Runnable {
     private int times;
     private String mensaje;
-    private int tiempo;
-    
+    private int ttw;
 
-    public GoodbyeTask(int times, String mensaje, int tiempo) {
+
+    public  RepeatMessageTask (int times, String mensaje, int tiempo) {
         this.times = times;
         this.mensaje = mensaje;
-        this.tiempo = tiempo;
-    }
-
-    public GoodbyeTask() {
-
+        this.ttw = tiempo;
     }
 
     @Override

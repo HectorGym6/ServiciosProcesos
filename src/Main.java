@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
 
-        Thread helloWorldThread = new Thread(new HelloWorldTask());
-        helloWorldThread.start();
+        Thread helloWorldThread = new Thread(new RepeatMessageTask(50,"Hello Mundo",20)
         Thread goodbyeThread = new Thread(new  GoodbyeTask());
+        helloWorldThread.start();
         goodbyeThread.start();
 
         /*
